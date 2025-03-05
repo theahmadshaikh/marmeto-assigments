@@ -1,0 +1,50 @@
+.splide__slide > div{
+    height: 80vh;
+    position: relative;
+}
+.first-slide{
+    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/1.png?v=1705665890&width=2000");
+   
+}
+.first-slide > div{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: white;
+}
+.second-slide{
+    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/4.png?v=1705665890&width=2000");
+    /* height: 80vh; */
+}
+.second-slide > div , .third-slide > div{
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+
+.third-slide{
+    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/3.png?v=1705665898&width=2000");
+}
+.splide__slide > div > div > :first-child{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    
+    /* color: white; */
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+.splide__slide > div > div > :last-child{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+
+
+.splide__slide > div > div > p{
+    width: 60%;
+    font-size: 2rem;
+    color: white;
+}

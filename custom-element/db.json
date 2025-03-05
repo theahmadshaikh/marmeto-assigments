@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "src":"https://veena-theme-fashion.myshopify.com/cdn/shop/files/1.png?v=1705665890&width=2000",
+            "aligment":"center",
+            "first_button_content":"Women's Apparel",
+            "description":"Elevate your wardrobe with our limited-time fashion offer!",
+            "second_button_content":"Explore More"
+        },
+        {
+            "src":"https://veena-theme-fashion.myshopify.com/cdn/shop/files/4.png?v=1705665890&width=2000",
+            "aligment":"bottom left",
+            "first_button_content":"Trendy classics",
+            "description":"Discover Signature Look: Fashion Forward and Fabulous!",
+            "second_button_content":"Shop now"
+        },
+        {
+            "src":"https://veena-theme-fashion.myshopify.com/cdn/shop/files/3.png?v=1705665898&width=2000",
+            "aligment":"bottom left",
+            "first_button_content":"Modern Elegance",
+            "description":"Step into the World of Style with the Latest Fashion Trends Unveiled!",
+            "second_button_content":"Explore now" 
+        }
+    ]
+}
