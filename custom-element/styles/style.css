@@ -1,45 +1,22 @@
-.splide__slide > div{
-    height: 80vh;
-    position: relative;
-}
-.first-slide{
-    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/1.png?v=1705665890&width=2000");
-   
-}
-.first-slide > div{
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    color: white;
-}
-.second-slide{
-    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/4.png?v=1705665890&width=2000");
-    /* height: 80vh; */
-}
-.second-slide > div , .third-slide > div{
-    position: absolute;
-    bottom: 20%;
-    left: 20%;
-}
 
-.third-slide{
-    background-image: url("https://veena-theme-fashion.myshopify.com/cdn/shop/files/3.png?v=1705665898&width=2000");
-}
-.splide__slide > div > div > :first-child{
-    width: fit-content;
-    height: fit-content;
+
+.splide__slide > div > div >  div :first-child{
+    /* width: fit-content; */
+    /* height: fit-content; */
     padding: 0.5rem 1rem;
     
     /* color: white; */
     border-radius: 1rem;
     border: none;
     outline: none;
+    cursor: pointer;
 }
-.splide__slide > div > div > :last-child{
+.splide__slide > div > div > div >:last-child{
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 
@@ -48,3 +25,37 @@
     font-size: 2rem;
     color: white;
 }
+
+.content {
+    position: relative; /* Ensures absolute positioning works inside */
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area properly */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 40%; 
+    left: 40%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    place-self: end center;
+  }
+  .second-slide,.third-slide{
+    left: 10%;
+    bottom: 10%;
+  }
+  

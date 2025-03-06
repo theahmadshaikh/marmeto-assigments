@@ -15,26 +15,31 @@ class CustomSlider extends HTMLElement {
    
     this.slidesData = JSON.parse(this.dataset.customSliderData) || [];
 
-    const classNames = ["first-slide", "second-slide", "third-slide"];
+    
 
     
+    
+  }
+
+  connectedCallback() { 
+    const classNames = ["first-slide", "second-slide", "third-slide"];
     const slideList = this.querySelector(".splide__list");
     slideList.innerHTML = this.slidesData.map((slide, index) => {
       return `
         <li class="splide__slide">
-          <div class="${classNames[index] || "default-slide"}">
-            <div class="content">
+          <div>
+            <div class="content" width="100vw" height="60vh">
+              <img src="${slide.src}" alt="${slide.description}" class="slide-image" >
+              <div class ="overlay ${classNames[index]}">
               <button>${slide.first_button_content}</button>
               <p>${slide.description}</p>
               <button>${slide.second_button_content}</button>
+              </div>
             </div>
           </div>
         </li>
       `;
     }).join(""); 
-  }
-
-  connectedCallback() { 
     this.mountSplider();
   }
 
@@ -60,3 +65,7 @@ const renderSlider = (slidersData) => {
     </custom-slider>
   `;
 };
+
+
+
+
