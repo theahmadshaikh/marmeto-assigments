@@ -1,11 +1,9 @@
 
 
 .splide__slide > div > div >  div :first-child{
-    /* width: fit-content; */
-    /* height: fit-content; */
     padding: 0.5rem 1rem;
     
-    /* color: white; */
+   
     border-radius: 1rem;
     border: none;
     outline: none;
@@ -58,4 +56,93 @@
     left: 10%;
     bottom: 10%;
   }
-  
+  .content {
+    position: relative; 
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Default position */
+.overlay {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+/* Alignment Classes */
+.align-left { top: 50%; left: 10%; transform: translateY(-50%); }
+.align-center { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.align-right { top: 50%; right: 10%; transform: translateY(-50%); }
+.align-start { top: 10%; left: 10%; }
+.align-end { bottom: 10%; right: 10%; }
+.align-flex-start { top: 10%; left: 50%; transform: translateX(-50%); }
+.align-flex-end { bottom: 10%; left: 50%; transform: translateX(-50%); }
+.align-space-between { top: 10%; left: 10%; right: 10%; }
+.align-space-around { top: 10%; left: 25%; right: 25%; }
+.align-space-evenly { top: 10%; left: 33%; right: 33%; }
+.align-baseline { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.align-stretch { width: 90%; height: auto; left: 5%; right: 5%; }
+
+#alignment-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #f8f4f2;
+    color: #0E0F23; 
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    margin-top: 1rem;
+    appearance: none;
+    margin-left: 1rem;
+    outline: none;
+}
+
+#alignment-select::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    pointer-events: none;
+    color: red;
+}
+
+#alignment-select:hover {
+    border-color: #B6B6D5; 
+    background: #E6E5E7;
+}
+
+#alignment-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(118, 118, 255, 0.5);
+}
+
+#alignment-select option {
+    background: white;
+    color: black;
+    font-size: 14px;
+}

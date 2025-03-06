@@ -1,10 +1,10 @@
 let slidersData = [];
-fetch("./db.json")
-  .then((response) => response.json())
-  .then((slider) => {
-    slidersData = slider.data;
-    renderSlider(slidersData);
-  });
+// fetch("./db.json")
+//   .then((response) => response.json())
+//   .then((slider) => {
+//     slidersData = slider.data;
+//     renderSlider(slidersData);
+//   });
 
 class CustomSlider extends HTMLElement {
   constructor() {
@@ -63,9 +63,60 @@ const renderSlider = (slidersData) => {
         </div>
       </section>
     </custom-slider>
+
+<select name="alignment" id="alignment-select">
+  <option value="">Please choose alignment</option>
+  <option value="left">Align Left</option>
+  <option value="center">Align Center</option>
+  <option value="right">Align Right</option>
+  <option value="justify">Spread Evenly</option>
+  <option value="start">Align to Start</option>
+  <option value="end">Align to End</option>
+  <option value="flex-start">Pack at Start</option>
+  <option value="flex-end">Pack at End</option>
+  <option value="space-between">Space Between Items</option>
+  <option value="space-around">Even Spacing Around</option>
+  <option value="space-evenly">Equal Spacing Everywhere</option>
+  <option value="baseline">Align by Text Line</option>
+  <option value="stretch">Stretch to Fit</option>
+</select>
+
   `;
 };
+const fetchData = async()=>{
+  try {
+    const response = await fetch("./db.json");
+    const slider = await response.json();
+    slidersData = slider.data;
+    renderSlider(slidersData);
+  } catch (error) {
+    console.log(error)
+  }
+}
 
+  document.addEventListener("DOMContentLoaded", async() => {
+    await fetchData();
+    const alignmentSelect = document.getElementById("alignment-select");
+  
+    alignmentSelect.addEventListener("change", (event) => {
+      console.log("Aligment event")
+      const selectedAlignment = event.target.value;
+      document.querySelectorAll(".overlay").forEach((overlay) => {
+        overlay.classList.remove(
+          "align-left", "align-center", "align-right", 
+          "align-start", "align-end", "align-flex-start", 
+          "align-flex-end", "align-space-between", 
+          "align-space-around", "align-space-evenly", 
+          "align-baseline", "align-stretch"
+        );
+  
+        if (selectedAlignment) {
+          overlay.classList.add(`align-${selectedAlignment}`);
+        }
+      });
+    });
+  });
+  
 
 
 
