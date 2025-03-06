@@ -29,14 +29,14 @@ class CustomSlider extends HTMLElement {
     // this.mountSplider();
   }
 
-  mountSplider() {
-    this.splideInstance = new Splide(this.splideNode, {
-      type: 'loop',
-      perPage: 1,
-      autoplay: true,
-    });
-    this.splideInstance.mount();
-  }
+  // mountSplider() {
+  //   this.splideInstance = new Splide(this.splideNode, {
+  //     type: 'loop',
+  //     perPage: 1,
+  //     autoplay: true,
+  //   });
+  //   this.splideInstance.mount();
+  // }
 }
 
 
@@ -68,15 +68,15 @@ class CustomThumbnailsSlider extends CustomSlider {
     }).join("");
 
     // Mount the thumbnails slider with correct config
-    this.splideInstance = new Splide(this.splideNode, {
-      fixedWidth: 120,
-      fixedHeight: 90,
-      isNavigation: true, // This is crucial for making it clickable
-      gap: 10,
-      perPage: 3,
-      pagination: false,
-      cover: true,
-    });
+    // this.splideInstance = new Splide(this.splideNode, {
+    //   fixedWidth: 120,
+    //   fixedHeight: 90,
+    //   isNavigation: true, // This is crucial for making it clickable
+    //   gap: 10,
+    //   perPage: 3,
+    //   pagination: false,
+    //   cover: true,
+    // });
 
     // this.splideInstance.mount();
   }
